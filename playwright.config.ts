@@ -5,7 +5,7 @@ const config: PlaywrightTestConfig = {
   testMatch: ["tests/LoginTest.spec.ts"],
   use: {
     baseURL: "https://ecommerce-playground.lambdatest.io/",
-    headless: false,
+    headless: true,
     screenshot: "on",
     video: "retain-on-failure",
     actionTimeout: 2000000
