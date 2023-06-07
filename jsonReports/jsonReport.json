@@ -1,0 +1,133 @@
+{
+  "config": {
+    "configFile": "E:\\New-Playwright\\playwright.config.ts",
+    "rootDir": "E:/New-Playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "jsonReports/jsonReport.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "E:/New-Playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "",
+        "name": "",
+        "testDir": "E:/New-Playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "tests/LoginTest.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.34.3",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "LoginTest.spec.ts",
+      "file": "LoginTest.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login Test @smoke",
+          "ok": false,
+          "tags": [
+            "smoke"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30010,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "E:\\New-Playwright\\page\\navigationMenu.ts",
+                        "column": 25,
+                        "line": 9
+                      },
+                      "message": "Error: page.click: Target closed\n=========================== logs ===========================\nwaiting for locator('xpath=//span[text()[normalize-space()=\\' Blog\\']]')\n============================================================\n\n\u001b[90m   at \u001b[39m..\\page\\navigationMenu.ts:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m     \u001b[36masync\u001b[39m clickOnMenuPage(name\u001b[33m:\u001b[39mstring){\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m`//span[text()[normalize-space()='${name}']]`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m\u001b[0m\n\n\u001b[2m    at NavigationMenu.clickOnMenuPage (E:\\New-Playwright\\page\\navigationMenu.ts:9:25)\u001b[22m\n\u001b[2m    at E:\\New-Playwright\\tests\\LoginTest.spec.ts:27:20\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - page.click at page\\navigationMenu.ts:9:25\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-06-07T11:17:59.068Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "E:\\New-Playwright\\test-results\\LoginTest-Login-Test-smoke\\video.webm"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "E:\\New-Playwright\\test-results\\LoginTest-Login-Test-smoke\\test-failed-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "539b1c6d7fcc511d6019-65a52ccfcac7e6736766",
+          "file": "LoginTest.spec.ts",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
