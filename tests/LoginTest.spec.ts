@@ -2,10 +2,14 @@ import {expect, test} from "@playwright/test"
 import login from "../page/login";
 import NavigationMenu from "../page/navigationMenu";
 
-test("Login Test @smoke", async ({page, baseURL}) => {
+test("Login Test @smoke", async ({browser}) => {
+    const context = await browser.newContext({
+        storageState: "./auth.json"
+    })
+    const page = await context.newPage();
     const loginDetails = new login(page);
     const menuName = new NavigationMenu(page);
-    await page.goto(`${baseURL}`);
+    await page.goto('https://ecommerce-playground.lambdatest.io/');
     const urlText = page.url();
     expect(urlText).toContain("https://ecommerce-playground.lambdatest.io/");
     expect(await page.locator("img[alt='Poco Electro']")).toBeVisible();
@@ -28,4 +32,8 @@ test("Login Test @smoke", async ({page, baseURL}) => {
 
     await page.waitForTimeout(5000);
 
+})
+
+test.describe("", async() => {
+    
 })

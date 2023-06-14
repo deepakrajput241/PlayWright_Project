@@ -24,10 +24,8 @@
         }
       ],
       [
-        "html",
-        {
-          "open": "never"
-        }
+        "E:\\New-Playwright\\node_modules\\experimental-allure-playwright\\dist\\index.js",
+        null
       ]
     ],
     "reportSlowTests": {
@@ -45,7 +43,7 @@
         "testDir": "E:/New-Playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "tests/LoginTest.spec.ts"
+          "tests/webScraping.spec.ts"
         ],
         "timeout": 30000
       }
@@ -58,17 +56,15 @@
   },
   "suites": [
     {
-      "title": "LoginTest.spec.ts",
-      "file": "LoginTest.spec.ts",
+      "title": "webScraping.spec.ts",
+      "file": "webScraping.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Login Test @smoke",
+          "title": "Calculate youtube playlist duration",
           "ok": false,
-          "tags": [
-            "smoke"
-          ],
+          "tags": [],
           "tests": [
             {
               "timeout": 30000,
@@ -80,40 +76,44 @@
                 {
                   "workerIndex": 0,
                   "status": "timedOut",
-                  "duration": 30010,
+                  "duration": 30000,
                   "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    "message": "\u001b[31mTest finished within timeout of 30000ms, but tearing down \"context\" ran out of time.\u001b[39m\n\u001b[31mPlease allow more time for the test, since teardown is attributed towards the test timeout budget.\u001b[39m"
                   },
                   "errors": [
                     {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "E:\\New-Playwright\\page\\navigationMenu.ts",
-                        "column": 25,
-                        "line": 9
-                      },
-                      "message": "Error: page.click: Target closed\n=========================== logs ===========================\nwaiting for locator('xpath=//span[text()[normalize-space()=\\' Blog\\']]')\n============================================================\n\n\u001b[90m   at \u001b[39m..\\page\\navigationMenu.ts:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m     \u001b[36masync\u001b[39m clickOnMenuPage(name\u001b[33m:\u001b[39mstring){\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m`//span[text()[normalize-space()='${name}']]`\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m\u001b[0m\n\n\u001b[2m    at NavigationMenu.clickOnMenuPage (E:\\New-Playwright\\page\\navigationMenu.ts:9:25)\u001b[22m\n\u001b[2m    at E:\\New-Playwright\\tests\\LoginTest.spec.ts:27:20\u001b[22m"
-                    },
-                    {
-                      "message": "Pending operations:\n  - page.click at page\\navigationMenu.ts:9:25\n"
+                      "message": "\u001b[31mTest finished within timeout of 30000ms, but tearing down \"context\" ran out of time.\u001b[39m\n\u001b[31mPlease allow more time for the test, since teardown is attributed towards the test timeout budget.\u001b[39m"
                     }
                   ],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m56\u001b[39m\n"
+                    },
+                    {
+                      "text": "\u001b[33m747.8499999999998\u001b[39m\n"
+                    },
+                    {
+                      "text": "12h 27m 50s\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-06-07T11:17:59.068Z",
+                  "startTime": "2023-06-12T14:03:57.378Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "E:\\New-Playwright\\test-results\\LoginTest-Login-Test-smoke\\video.webm"
+                      "path": "E:\\New-Playwright\\test-results\\webScraping-Calculate-youtube-playlist-duration\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "E:\\New-Playwright\\test-results\\webScraping-Calculate-youtube-playlist-duration\\trace.zip"
                     },
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "E:\\New-Playwright\\test-results\\LoginTest-Login-Test-smoke\\test-failed-1.png"
+                      "path": "E:\\New-Playwright\\test-results\\webScraping-Calculate-youtube-playlist-duration\\test-failed-1.png"
                     }
                   ]
                 }
@@ -121,9 +121,9 @@
               "status": "unexpected"
             }
           ],
-          "id": "539b1c6d7fcc511d6019-65a52ccfcac7e6736766",
-          "file": "LoginTest.spec.ts",
-          "line": 5,
+          "id": "791de5f602749fd0b8fd-7955982da4626594f517",
+          "file": "webScraping.spec.ts",
+          "line": 3,
           "column": 5
         }
       ]
