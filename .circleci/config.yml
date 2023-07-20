@@ -1,21 +1,5 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
 version: 2.1
 
-jobs:
-  run-test:
-    docker:
-      - image: mcr.microsoft.com/playwright:v1.36.0-jammy
-    steps:
-      - checkout
-      - run:
-          name: Download dependency
-          command: npm ci         
-      - run:
-          name: Run tests
-          command: npm run test
-      - store_test_results:
-          path: results.xml
-workflows:
-  run-test:
-    jobs:
-      - run-test
+
 
