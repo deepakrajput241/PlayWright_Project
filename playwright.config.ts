@@ -40,7 +40,7 @@ const config: PlaywrightTestConfig = {
  
   fullyParallel: !true,
   reporter: process.env.CI ? [["junit", {
-    outputFile: "result.xml"
+    outputFile: "results.xml"
   }]] : [["dot"], ["json", {
     outputFile:"test-result.json"
   }], ["html", {
