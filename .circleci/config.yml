@@ -1,0 +1,21 @@
+version: 2.1
+jobs:
+  run-test:
+    timeout-minutes: 120
+    docker:
+      - image: mcr.microsoft.com/playwright:v1.36.0-jammy
+    steps:
+      - checkout
+      - run:
+          name: Download dependency
+          command: npm ci
+      - run:      
+          name: Run tests
+          command: npm run test
+      - store_test_results:
+          path: results.xml
+  workflows:
+    run-test-workflow:
+      jobs:
+        - run-test
+    
